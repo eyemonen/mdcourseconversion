@@ -7,6 +7,8 @@ Slidejen konversio tapahtuu backslide-moduulin kautta (sis. remark.js:n).
 
 Lisäksi imageen asennetaan rsync, jotta HTML-exportti voidaan automaattisesti viedä palvelimelle.
 
+DockerHubissa: https://cloud.docker.com/repository/docker/eyemonen/mdcourseconversion
+
 ## Käyttö
 
 Lokaali markdown-sivujen konversio:
@@ -30,7 +32,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: eyemonen/coursestuff
+      - image: eyemonen/mdcourseconversion
     working_directory: ~/input
     branches:
       only:
